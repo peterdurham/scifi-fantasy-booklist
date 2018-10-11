@@ -1,32 +1,134 @@
-.App {
-  text-align: center;
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+*{
+  margin:0;
+  padding:0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.App{
+  font-family: 'Open Sans', sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  height:10vh;
+  background-color: rgb(49,53,62);
+  color:white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+}
+header h1{
+  font-size:38px;
+}
+main{
+  height:auto;
+  display:flex;
+  background-color: rgb(240,240,240);
+}
+.book-summary{
+  background-color:rgb(240,240,240);
+  height:auto;
+}
+nav{
+  min-width: 350px;
+  max-width:350px;
+  flex-basis:25%;
+  overflow-y:scroll;
+  height:90vh;
+  position: fixed;
+}
+.selected{
+  border: 1px solid grey;
+  padding:8px;
+  font-size:20px;
+  font-weight:bold;
+  text-align:center;
+  background-color:rgb(240,240,240);
+}
+.bookNav{
+  border: 1px solid grey;
+  background-color: rgb(49,53,62);
+  color:white;
+  padding:5px 12px;
+  font-weight:500;
+  font-size:17px;
 }
 
-.App-link {
-  color: #61dafb;
+article{
+  flex-basis:75%
+}
+.display{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left:400px;
+  margin-top:40px;
+
+
+}
+.card{
+  width:210px;
+  height:370px;
+  margin:20px;
+  padding:8px;
+  border:1px solid grey;
+  border-radius:10px;
+  text-align:center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:white;
+}
+.card h3{
+  height:60px;
+  font-size:22px;
+}
+.card p{
+  font-size:20px;
+  margin-top:4px;
+}
+.card img{
+  width:150px;
+  padding-top:8px;
+}
+.card img:hover{
+  opacity: .9;
+
+}
+.back-button{
+  background-color: white;
+	border: 1px solid grey;
+  font-size:24px;
+	padding:10px 26px;
+	font-weight:bold;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.summaryCard{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding:30px;
+  margin-top:20px;
+  margin-bottom:160px;
+  width:900px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+}
+.summaryCard img{
+  width:300px;
+  max-height: 460px;
+
+}
+.description{
+  padding:0px 20px;
+}
+.description h1{
+  font-size:34px;
+  margin-bottom:10px;
+}
+.description p {
+  font-size: 20px;
+  margin:5px;
+}
+.description div{
+  font-size:16px;
+  margin-top:20px;
 }
