@@ -68,9 +68,10 @@ class App extends Component {
               className={
                 this.state.displayAll === true ? "selected" : "bookNav"
               }
+              style={{ fontWeight: "700", fontSize: "18px" }}
               onClick={() => this.selectAllBooks()}
             >
-              View All Books
+              All Books
             </p>
             {this.state.allBooks.map(book => (
               <p
@@ -82,10 +83,12 @@ class App extends Component {
               </p>
             ))}
           </nav>
-          <article className="display">
-            {allBooks}
-            {selectedBook}
-          </article>
+          <div className="article-container">
+            <article className="display">
+              {allBooks}
+              {selectedBook}
+            </article>
+          </div>
         </main>
       </div>
     );

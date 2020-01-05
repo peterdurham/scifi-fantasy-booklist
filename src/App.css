@@ -1,134 +1,161 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.App{
-  font-family: 'Open Sans', sans-serif;
+.App {
+  font-family: "Noto Sans", sans-serif;
 }
-header{
-  height:10vh;
-  background-color: rgb(49,53,62);
-  color:white;
+header {
+  height: 10vh;
+  background-color: rgb(49, 53, 62);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: fixed;
+  width: 100vw;
+  z-index: 42;
 }
-header h1{
-  font-size:38px;
+header h1 {
+  font-size: 38px;
 }
-main{
-  height:auto;
-  display:flex;
-  background-color: rgb(240,240,240);
+main {
+  height: auto;
+  display: flex;
+  background-color: rgb(240, 240, 240);
 }
-.book-summary{
-  background-color:rgb(240,240,240);
-  height:auto;
+.book-summary {
+  background-color: rgb(240, 240, 240);
+  height: auto;
 }
-nav{
+nav {
   min-width: 350px;
-  max-width:350px;
-  flex-basis:25%;
-  overflow-y:scroll;
-  height:90vh;
+  max-width: 350px;
+  flex-basis: 25%;
+  overflow-y: scroll;
+  height: 90vh;
+  margin-top: 10vh;
   position: fixed;
 }
-.selected{
+.selected {
   border: 1px solid grey;
-  padding:8px;
-  font-size:20px;
-  font-weight:bold;
-  text-align:center;
-  background-color:rgb(240,240,240);
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
+  padding: 5px 12px;
+  height: 30px;
+  line-height: 30px;
 }
-.bookNav{
+.bookNav {
   border: 1px solid grey;
-  background-color: rgb(49,53,62);
-  color:white;
-  padding:5px 12px;
-  font-weight:500;
-  font-size:17px;
+  background-color: rgb(49, 53, 62);
+  color: white;
+  padding: 5px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  height: 30px;
+  line-height: 30px;
 }
-
-article{
-  flex-basis:75%
+.bookNav:hover {
+  border: 1px solid grey;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: black;
+  cursor: pointer;
+  padding: 5px 12px;
+  height: 30px;
+  line-height: 30px;
 }
-.display{
-  display:flex;
+article {
+  flex-basis: 75%;
+  padding-top: 10vh;
+  margin-left: 400px;
+}
+.article-container {
+  margin-left: 360px;
+  width: 100%;
+}
+.display {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left:400px;
-  margin-top:40px;
-
-
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1260px;
 }
-.card{
-  width:210px;
-  height:370px;
-  margin:20px;
-  padding:8px;
-  border:1px solid grey;
-  border-radius:10px;
-  text-align:center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color:white;
-}
-.card h3{
-  height:60px;
-  font-size:22px;
-}
-.card p{
-  font-size:20px;
-  margin-top:4px;
-}
-.card img{
-  width:150px;
-  padding-top:8px;
-}
-.card img:hover{
-  opacity: .9;
-
-}
-.back-button{
+.card {
+  width: 240px;
+  height: 370px;
+  margin: 20px;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
-	border: 1px solid grey;
-  font-size:24px;
-	padding:10px 26px;
-	font-weight:bold;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card h3 {
+  height: 60px;
+  font-size: 22px;
+  margin-top: 4px;
+}
+.card p {
+  font-size: 20px;
+  margin-top: 4px;
 }
 
-.summaryCard{
+.card img {
+  width: 150px;
+  padding: 8px 0;
+}
+
+.back-button {
+  background-color: white;
+  border: 1px solid grey;
+  font-size: 24px;
+  padding: 10px 26px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.summaryCard {
   display: flex;
   flex-direction: row;
   border: 1px solid grey;
   border-radius: 10px;
-  padding:30px;
-  margin-top:20px;
-  margin-bottom:160px;
-  width:900px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 160px;
+  width: 900px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
 }
-.summaryCard img{
-  width:300px;
+.summaryCard img {
+  width: 300px;
   max-height: 460px;
-
 }
-.description{
-  padding:0px 20px;
+.description {
+  padding: 0px 20px;
 }
-.description h1{
-  font-size:34px;
-  margin-bottom:10px;
+.description h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 .description p {
   font-size: 20px;
-  margin:5px;
+  margin: 5px;
 }
-.description div{
-  font-size:16px;
-  margin-top:20px;
+.description div {
+  font-size: 16px;
+  margin-top: 20px;
 }
