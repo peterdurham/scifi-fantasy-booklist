@@ -1,11 +1,9 @@
 # Sci-Fi and Fantasy Booklist App  
-Descriptions and details for varios Sci-Fi/Fantasy books  
+Descriptions and details for various Sci-Fi/Fantasy books  
   
-  ![app running](http://www.peterdurham.site/images/site-images/projects/scifi-fantasy-booklist.jpg)  
- 
 ## Tools  
 This project was built using **Create-React-App**  
-This project is hosted on **Github Pages [here](https://peterdurham.github.io/scifi-fantasy-booklist/)**  
+This project is hosted on **Netlify [here](https://sleepy-mahavira-c3dd97.netlify.com/)**  
 
 ## Instructions  
 To install, clone or download the repository  
